@@ -1,0 +1,184 @@
+$color-blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$dark-blue: hsl(209, 33%, 12%);
+$color-silver: silver;
+$width-responsive: 600px;
+%btn-button {
+    border: none;
+        color: white;
+        background-color:$color-blue;
+        height: 5vh;
+        width: $width-responsive/3;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+}
+
+@mixin placeholder {
+        width: $width-responsive/2;
+        height: 5vh;
+        border: 2px solid $color-silver;
+        border-radius: 12px;
+}
+body {
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90px;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+}
+
+.container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+    align-content: stretch;
+
+    &__title--main {
+        color:$color-silver;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+
+    &__input--mod {
+       @include placeholder
+    }
+    
+}
+
+
+.button {
+    margin-left: 10px;
+   
+    &__main--blue {
+        @extend %btn-button;
+        &:hover {
+            color: $gray;
+            background-color: $light-red;
+        }
+    }
+    
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    &__primary {
+        width: $width-responsive;
+    }
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    .fab {
+        margin: 10px;
+        color: $color-blue;
+        border:1px solid $gray;
+        border-radius: 20px;
+        padding: 10px 10px;
+        &:hover {
+            color: $gray;
+            background-color: $light-red;
+        }
+    }
+    
+
+
+    
+}
+
+.attribution{
+    color: $color-blue;
+    font-size: 10px;
+    
+    a{
+        text-decoration:none;
+        color: $color-blue;
+        font-size: 10px;
+
+    }
+}
+
+
+
+
+h4 {
+    text-align: center;
+    color: $gray;
+    font-size: 10px;
+    opacity: 0.5;
+}   
+
+
+
+@media only screen and (max-width: 600px) {
+
+   
+.form {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+
+    &__input--mod {
+       width: $width-responsive/2;
+       margin-left: 20%;
+    }
+    
+}
+.button {
+    
+    margin-left: 10px;
+    margin-top: 3%;
+   
+    &__main--blue {
+       width: $width-responsive/2;
+       margin-left: 20%;
+        &:hover {
+            color: $gray;
+            background-color: $light-red;
+        }
+    }
+    
+}
+.img {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    &__primary {
+        width: $width-responsive/2;
+    }
+}
+h4 {
+    text-align: center;
+    color: $gray;
+    font-size: 0.5em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}   
+    } 

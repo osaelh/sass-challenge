@@ -1,0 +1,14 @@
+{
+  "name": "sass2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compiler:sass": "node-sass sass/style.scss css/style.css -w"
+    },
+  "author": "osa",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
