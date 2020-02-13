@@ -1,4 +1,4 @@
-.button__main--blue {
+.form__button__main--blue {
   border: none;
   color: white;
   background-color: #4f7df3;
@@ -72,11 +72,11 @@ body {
   border-radius: 12px;
 }
 
-.button {
+.form__button {
   margin-left: 10px;
 }
 
-.button__main--blue:hover {
+.form__button__main--blue:hover {
   color: #969696;
   background-color: #ff5263;
 }

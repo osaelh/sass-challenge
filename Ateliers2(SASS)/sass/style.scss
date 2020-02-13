@@ -62,12 +62,8 @@ body {
     &__input--mod {
        @include placeholder
     }
-    
-}
-
-
-.button {
-    margin-left: 10px;
+    &__button{
+       margin-left: 10px;
    
     &__main--blue {
         @extend %btn-button;
@@ -77,7 +73,8 @@ body {
         }
     }
     
-}
+     }
+    }
 
 .img {
     display: flex;
